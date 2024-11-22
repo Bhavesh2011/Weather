@@ -1,0 +1,372 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Card Styling */
+.card {
+    width: 90%; /* Ensure it fits on smaller screens */
+    max-width: 470px;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: #fff;
+    border-radius: 20px;
+    padding: 30px 20px; /* Adjust padding for smaller screens */
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Search Styling */
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 8px; /* Reduced gap between input and button */
+}
+
+.search input {
+    flex: 1; /* Allow the input box to take up remaining space */
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 20px; /* Adjust padding for a comfortable size */
+    height: 45px; /* Reduced height of the search box by 5px */
+    border-radius: 25px; /* Rounded corners */
+    font-size: 16px; /* Adjust font size */
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%; /* Circular button */
+    width: 45px; /* Reduced width by 5px */
+    height: 45px; /* Match height with the input box */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.search button:hover {
+    background: #d4f5f2;
+}
+
+.search button img {
+    width: 14px; /* Adjust icon size */
+}
+
+/* Weather Icon Styling */
+.weather-icon {
+    width: 80px; /* Smaller icon size for smaller screens */
+    height: auto;
+    margin: 20px 0;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Weather Text Styling */
+.temp {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 60px; /* Reduced font size */
+    margin: 10px 0;
+}
+
+.city {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 35px; /* Reduced font size */
+    text-transform: capitalize;
+    opacity: 0.8;
+}
+
+/* Details Section Styling */
+.details {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: space-around;
+    gap: 15px; /* Add spacing between items */
+    margin-top: 20px;
+}
+
+.col {
+    text-align: center;
+    width: 45%; /* Adjust width for smaller screens */
+}
+
+.col img {
+    width: 30px; /* Smaller icons */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.humidity, .wind {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.col p:last-child {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Weather Section Visibility */
+.weather {
+    display: none;
+}
+
+.error {
+    text-align: left;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #ff4c4c;
+    display: none;
+}
+
+/* Floating Animation for Weather Icon */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .card {
+        padding: 20px 15px; /* Reduced padding */
+    }
+
+    .temp {
+        font-size: 50px; /* Further reduce font size */
+    }
+
+    .city {
+        font-size: 30px;
+    }
+
+    .search {
+        gap: 8px; /* Reduce gap between input and button */
+    }
+
+    .details {
+        gap: 10px; /* Reduce gap between details */
+    }
+
+    .col {
+        width: 100%; /* Stack details vertically */
+    }
+
+    .col img {
+        width: 25px; /* Further reduce icon size */
+    }
+}
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Card Styling */
+.card {
+    width: 90%; /* Ensure it fits on smaller screens */
+    max-width: 470px;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: #fff;
+    border-radius: 20px;
+    padding: 30px 20px; /* Adjust padding for smaller screens */
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Search Styling */
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 8px; /* Reduced gap between input and button */
+}
+
+.search input {
+    flex: 1; /* Allow the input box to take up remaining space */
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 20px; /* Adjust padding for a comfortable size */
+    height: 45px; /* Reduced height of the search box by 5px */
+    border-radius: 25px; /* Rounded corners */
+    font-size: 16px; /* Adjust font size */
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%; /* Circular button */
+    width: 45px; /* Reduced width by 5px */
+    height: 45px; /* Match height with the input box */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.search button:hover {
+    background: #d4f5f2;
+}
+
+.search button img {
+    width: 14px; /* Adjust icon size */
+}
+
+/* Weather Icon Styling */
+.weather-icon {
+    width: 80px; /* Smaller icon size for smaller screens */
+    height: auto;
+    margin: 20px 0;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Weather Text Styling */
+.temp {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 60px; /* Reduced font size */
+    margin: 10px 0;
+}
+
+.city {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 35px; /* Reduced font size */
+    text-transform: capitalize;
+    opacity: 0.8;
+}
+
+/* Details Section Styling */
+.details {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: space-around;
+    gap: 15px; /* Add spacing between items */
+    margin-top: 20px;
+}
+
+.col {
+    text-align: center;
+    width: 45%; /* Adjust width for smaller screens */
+}
+
+.col img {
+    width: 30px; /* Smaller icons */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.humidity, .wind {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.col p:last-child {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Weather Section Visibility */
+.weather {
+    display: none;
+}
+
+.error {
+    text-align: left;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #ff4c4c;
+    display: none;
+}
+
+/* Floating Animation for Weather Icon */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .card {
+        padding: 20px 15px; /* Reduced padding */
+    }
+
+    .temp {
+        font-size: 50px; /* Further reduce font size */
+    }
+
+    .city {
+        font-size: 30px;
+    }
+
+    .search {
+        gap: 8px; /* Reduce gap between input and button */
+    }
+
+    .details {
+        gap: 10px; /* Reduce gap between details */
+    }
+
+    .col {
+        width: 100%; /* Stack details vertically */
+    }
+
+    .col img {
+        width: 25px; /* Further reduce icon size */
+    }
+}
